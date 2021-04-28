@@ -1,0 +1,32 @@
+{
+  "name": "fullstackopen_part3_backend",
+  "version": "1.0.0",
+  "description": "FullstackOpen part 3 backend server exercise",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henettaja/fullstackopen_part3_backend.git"
+  },
+  "keywords": [
+    "node",
+    "server",
+    "backend"
+  ],
+  "author": "Henri Väisänen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/henettaja/fullstackopen_part3_backend/issues"
+  },
+  "homepage": "https://github.com/henettaja/fullstackopen_part3_backend#readme",
+  "dependencies": {
+    "express": "*"
+  },
+  "devDependencies": {
+    "nodemon": "*"
+  }
+}
