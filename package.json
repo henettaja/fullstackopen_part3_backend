@@ -24,7 +24,8 @@
   },
   "homepage": "https://github.com/henettaja/fullstackopen_part3_backend#readme",
   "dependencies": {
-    "express": "*"
+    "express": "*",
+    "morgan": "*"
   },
   "devDependencies": {
     "nodemon": "*"
