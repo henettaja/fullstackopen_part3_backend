@@ -1073,7 +1073,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","react-dom":"2sg1U","./App":"6Pm2X","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./index.css":"6Y03C"}],"3b2NM":[function(require,module,exports) {
+},{"react":"3b2NM","react-dom":"2sg1U","./App":"6Pm2X","./index.css":"6Y03C","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3b2NM":[function(require,module,exports) {
 "use strict";
 if ("development" === 'production') {
   module.exports = require('./cjs/react.production.min.js');
@@ -25307,7 +25307,43 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./components/AddPersonForm":"4HWkK","./components/People":"wHlkQ","./components/SearchForm":"44z7q","./services/personsService":"2WgDp","./components/StatusText":"5g2Dd"}],"5gA8y":[function(require,module,exports) {
+},{"react":"3b2NM","./components/AddPersonForm":"4HWkK","./components/People":"wHlkQ","./components/SearchForm":"44z7q","./components/StatusText":"5g2Dd","./services/personsService":"2WgDp","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"4HWkK":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  const AddPersonForm = props => {
+    const {formHandler, nameChangeHandler, numChangeHandler, nameValue, numberValue} = props;
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement(_reactDefault.default.Fragment, null, /*#__PURE__*/_reactDefault.default.createElement("form", {
+        onSubmit: formHandler
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", null, "name: ", /*#__PURE__*/_reactDefault.default.createElement("input", {
+        value: nameValue,
+        onChange: nameChangeHandler
+      })), /*#__PURE__*/_reactDefault.default.createElement("div", null, "number: ", /*#__PURE__*/_reactDefault.default.createElement("input", {
+        value: numberValue,
+        onChange: numChangeHandler
+      })), /*#__PURE__*/_reactDefault.default.createElement("div", null, /*#__PURE__*/_reactDefault.default.createElement("button", {
+        type: "submit"
+      }, "add"))))
+    );
+  };
+  _c = AddPersonForm;
+  exports.default = AddPersonForm;
+  var _c;
+  $RefreshReg$(_c, "AddPersonForm");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"5gA8y":[function(require,module,exports) {
 "use strict";
 
 exports.interopDefault = function (a) {
@@ -25506,43 +25542,7 @@ function registerExportsForReactRefresh(module) {
   }
 }
 
-},{"react-refresh/runtime":"592mh"}],"4HWkK":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-try {
-  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-  _parcelHelpers.defineInteropFlag(exports);
-  var _react = require("react");
-  var _reactDefault = _parcelHelpers.interopDefault(_react);
-  const AddPersonForm = props => {
-    const {formHandler, nameChangeHandler, numChangeHandler, nameValue, numberValue} = props;
-    return (
-      /*#__PURE__*/_reactDefault.default.createElement(_reactDefault.default.Fragment, null, /*#__PURE__*/_reactDefault.default.createElement("form", {
-        onSubmit: formHandler
-      }, /*#__PURE__*/_reactDefault.default.createElement("div", null, "name: ", /*#__PURE__*/_reactDefault.default.createElement("input", {
-        value: nameValue,
-        onChange: nameChangeHandler
-      })), /*#__PURE__*/_reactDefault.default.createElement("div", null, "number: ", /*#__PURE__*/_reactDefault.default.createElement("input", {
-        value: numberValue,
-        onChange: numChangeHandler
-      })), /*#__PURE__*/_reactDefault.default.createElement("div", null, /*#__PURE__*/_reactDefault.default.createElement("button", {
-        type: "submit"
-      }, "add"))))
-    );
-  };
-  _c = AddPersonForm;
-  exports.default = AddPersonForm;
-  var _c;
-  $RefreshReg$(_c, "AddPersonForm");
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"wHlkQ":[function(require,module,exports) {
+},{"react-refresh/runtime":"592mh"}],"wHlkQ":[function(require,module,exports) {
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -25601,7 +25601,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"44z7q":[function(require,module,exports) {
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"44z7q":[function(require,module,exports) {
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -25629,12 +25629,47 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"5g2Dd":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  const StatusText = ({status}) => {
+    if (status.err) {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "error"
+        }, status.msg)
+      );
+    } else {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "status"
+        }, status.msg)
+      );
+    }
+  };
+  _c = StatusText;
+  exports.default = StatusText;
+  var _c;
+  $RefreshReg$(_c, "StatusText");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
 },{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"2WgDp":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 var _axios = require("axios");
 var _axiosDefault = _parcelHelpers.interopDefault(_axios);
-const baseUrl = "https://calm-garden-76926.herokuapp.com/api/persons";
+const baseUrl = "/api/persons";
 const getAll = () => {
   const request = _axiosDefault.default.get(baseUrl);
   return request.then(response => response.data);
@@ -27403,41 +27438,6 @@ module.exports = function isAxiosError(payload) {
   return (typeof payload === 'object') && (payload.isAxiosError === true);
 };
 
-},{}],"5g2Dd":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-try {
-  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-  _parcelHelpers.defineInteropFlag(exports);
-  var _react = require("react");
-  var _reactDefault = _parcelHelpers.interopDefault(_react);
-  const StatusText = ({status}) => {
-    if (status.err) {
-      return (
-        /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "error"
-        }, status.msg)
-      );
-    } else {
-      return (
-        /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "status"
-        }, status.msg)
-      );
-    }
-  };
-  _c = StatusText;
-  exports.default = StatusText;
-  var _c;
-  $RefreshReg$(_c, "StatusText");
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6Y03C":[function() {},{}]},["1j6wU","7sNyx","5rkFb"], "5rkFb", "parcelRequireb7ed")
+},{}],"6Y03C":[function() {},{}]},["1j6wU","7sNyx","5rkFb"], "5rkFb", "parcelRequireb7ed")
 
 //# sourceMappingURL=index.3fafb3e2.js.map
