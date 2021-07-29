@@ -8,7 +8,7 @@
     "dev": "nodemon index.js",
     "build:ui": "rm -rf dist && cd ../fullstackopen/osa2/puhelinluettelo && npm run build && cp -r dist ../../../fullstackopen_part3_backend",
     "deploy": "git push heroku main",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",    
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",
     "logs:prod": "heroku logs --tail",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -30,6 +30,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "*",
+    "mongoose": "^5.13.3",
     "morgan": "*"
   },
   "devDependencies": {
