@@ -29,6 +29,7 @@
   "homepage": "https://github.com/henettaja/fullstackopen_part3_backend#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "*",
     "mongoose": "^5.13.3",
     "morgan": "*"
