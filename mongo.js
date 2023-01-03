@@ -1,11 +1,9 @@
+require('dotenv').config()
 const mongoose = require("mongoose")
 
-// usage: node mongo.js yourpassword Anna 040-1234556
+// usage: node mongo.js Anna 040-1234556
 
-const password = process.argv[2]
-
-const url = `mongodb+srv://fullstack_henri:${password}@cluster0.f06km.mongodb.net/peopledb?retryWrites=true&w=majority
-`
+const url = process.env.MONGODB_URI
 
 mongoose.connect(url, {
 	useNewUrlParser: true,
@@ -21,7 +19,7 @@ const personSchema = new mongoose.Schema({
 
 const Person = mongoose.model("Person", personSchema)
 
-if (process.argv.length === 3) {
+if (process.argv.length === 2) {
 	console.log("Fetching phonebook data...")
 	Person.find({}).then(result => {
 		console.log("Results:")
@@ -30,8 +28,8 @@ if (process.argv.length === 3) {
 		})
 		mongoose.connection.close()
 	})
-} else if (process.argv.length === 5) {
-	const [, , , name, number] = process.argv
+} else if (process.argv.length === 4) {
+	const [, , name, number] = process.argv
 
 	const person = new Person({
 		name: name,
