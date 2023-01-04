@@ -3,7 +3,6 @@ const express = require("express")
 const morgan = require("morgan")
 const cors = require("cors")
 const Person = require('./models/person')
-const mongoose = require('mongoose')
 const app = express()
 
 const PORT = process.env.PORT
@@ -12,7 +11,7 @@ app.use(morgan(":method :url :status :res[content-length] :data /// :response-ti
 app.use(cors())
 app.use(express.static("dist"))
 
-morgan.token("data", (req, res) => {
+morgan.token("data", (req) => {
 	if (req.method === "POST") return JSON.stringify(req.body)
 })
 
