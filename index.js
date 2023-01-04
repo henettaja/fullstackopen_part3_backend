@@ -16,50 +16,6 @@ morgan.token("data", (req, res) => {
 	if (req.method === "POST") return JSON.stringify(req.body)
 })
 
-let people = [
-	{
-		name: "Arto Hellas",
-		number: "040-1231244",
-		id: 1,
-	},
-	{
-		name: "Brock",
-		number: "041-5555555",
-		id: 3,
-	},
-	{
-		name: "Ada Lovelace",
-		number: "39-44-5323523",
-		id: 4,
-	},
-	{
-		name: "Dan Abramov",
-		number: "12-43-234345",
-		id: 5,
-	},
-	{
-		name: "Mary Poppendieck",
-		number: "39-23-6423122",
-		id: 6,
-	},
-	{
-		name: "Matti Meikäläinen",
-		number: "123-4567890",
-		id: 7,
-	},
-	{
-		name: "Henri Väisänen",
-		number: "044-040404",
-		id: 8,
-	},
-]
-
-const randomId = () => {
-	const { max, min } = { max: 10000, min: 10 }
-
-	return Math.floor(Math.random() * (max - min) + min)
-}
-
 app.get("/info", (req, res) => {
 	res.send(
 		`<p>Phonebook has info of ${people.length} people</p>
