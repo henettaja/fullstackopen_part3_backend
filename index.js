@@ -25,20 +25,18 @@ app.get("/info", (req, res) => {
 	})
 })
 
-app.get("/api/persons", (req, res) => {
-	console.log("Getting all persons");
-	Person.find({}).then(persons => { res.json(persons)}).catch(error => res.status(401).json(error))
+app.get("/api/persons", (req, res, next) => {
+	Person.find({}).then(persons => { res.json(persons)}).catch(error => next(error))
 })
 
-app.get("/api/persons/:id", (req, res) => {
+app.get("/api/persons/:id", (req, res, next) => {
 	const id = req.params.id
 	Person.findById(id)
 		.then(person => res.json(person))
-		.catch(error => res.status(404).json(error))
+		.catch(error => next(error))
 })
 
-app.post("/api/persons", (req, res) => {
-	console.log("Adding new person");
+app.post("/api/persons", (req, res, next) => {
 	const body = req.body
 
 	if (!body.name || !body.number) {
@@ -52,15 +50,25 @@ app.post("/api/persons", (req, res) => {
 		number: body.number,
 	})
 
-	person.save().then(savedContact => 	res.json(savedContact))
+	person.save().then(savedContact => 	res.json(savedContact)).catch(error => next(error))
 })
 
-app.delete("/api/persons/:id", (req, res) => {
+app.put('/api/persons/:id', (req, res, next) => {
 	const id = req.params.id
-	Person.findByIdAndRemove(id).then(val => {
-		console.log(val);
-		res.status(204).end();
-	}).catch(error => res.json(error))
+	const person = {
+		name: req.body.name,
+		number: req.body.number
+	}
+	Person.findByIdAndUpdate(id, person, {returnDocument: 'after'}).then(updatedPerson => {
+		res.json(updatedPerson).end()
+	}).catch(error => next(error))
+})
+
+app.delete("/api/persons/:id", (req, res, next) => {
+	const id = req.params.id
+	Person.findByIdAndRemove(id).then(_ => {
+		res.status(204).end()
+	}).catch(error => next(error))
 })
 
 const unknownEndpoint = (req, res) => {
@@ -68,6 +76,18 @@ const unknownEndpoint = (req, res) => {
 }
 
 app.use(unknownEndpoint)
+
+const errorHandler = (error, request, response, next) => {
+  console.error(error.name, error.message)
+
+  if (error.name === 'CastError') {
+    return response.status(400).send({ error: 'malformatted id' })
+  }
+
+  next(error)
+}
+
+app.use(errorHandler)
 
 app.listen(PORT, () => {
 	console.log(`🔥 Server running on port ${PORT}`)
