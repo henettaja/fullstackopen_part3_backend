@@ -44,6 +44,10 @@ app.post("/api/persons", (req, res, next) => {
 		})
 	}
 
+	Person.find({ name: body.name }).then(val => {
+		res.status(304).json(val).end()
+	})
+
 	const person = new Person({
 		name: body.name,
 		number: body.number,
