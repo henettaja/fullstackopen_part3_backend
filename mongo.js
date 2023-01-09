@@ -71,14 +71,14 @@ if (process.argv.length === 2) {
     number: number,
   })
 
-  person.save().then(_ => {
+  person.save().then(() => {
     console.log('Added', name + '\'s number', number, 'to phonebook!\n')
     mongoose.connection.close()
   })
 } else if (process.argv.length === 3 && process.argv[2] === 'init') {
   console.log(process.argv)
   initPeople.forEach(person => {
-    new Person({ name: person.name, number: person.number }).save().then(_ => {
+    new Person({ name: person.name, number: person.number }).save().then(() => {
       console.log('Added', person.name + '\'s number', person.number, 'to phonebook!\n')
     })
   })
